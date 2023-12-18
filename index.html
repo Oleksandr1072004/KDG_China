@@ -1,0 +1,1746 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" content="width-device-width, initial-scale=1.0">
+    <link rel="icon" href="images/icons/kdg_icon2.png" type="image/x-icon">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Playfair Display' rel='stylesheet'>
+    <title id="title">KDG China</title>
+    <script src="js/jquery-3.4.1.js"></script>
+    <style>
+        * {
+            font-family: 'Playfair Display', sans-serif;
+            font-weight: normal;
+            font-style: normal;
+            margin: 0;
+            padding: 0;
+            scroll-padding-top: 2rem;
+            scroll-behavior: smooth;
+            box-sizing: border-box;
+            list-style: none;
+            text-decoration: none;
+        }
+
+        .nav-wrapper {
+          width: 100%;
+          position: sticky;
+          top: 0;
+          margin-left: auto;
+          margin-right: auto;
+          background-color: #fff;
+        }
+        #nav-wrapper {
+          width: 100%;
+          position: sticky;
+          top: 0;
+          margin-left: auto;
+          margin-right: auto;
+          background-color: #fff;
+        }
+        .upper > li.upper-right {
+            float: right;
+          }
+        .footer {
+              background-color: rgb(245,245,245);
+              color: #002;
+              position: absolute;
+              width: 100%;
+              left: 0;
+              align-self: flex-end;
+              margin-top: 25px;
+              top:expression((0-(footer.offsetHeight)+(document.documentElement.clientHeight ? document.documentElement.clientHeight : document.body.clientHeight)+(ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop))+'px');
+
+            }
+            .row {
+              display: flex;
+              -webkit-border-radius: 10px;
+              -moz-border-radius: 10px;
+              border-radius: 10px;
+              background: transparent;
+              overflow: hidden;
+              background-image: -webkit-gradient(linear, left bottom, left top, from(#FE5E21), to(#0565F3));
+              background-image: -webkit-linear-gradient(bottom, #FE5E21 0%, #0565F3 100%);
+              background-image: -moz-linear-gradient(bottom, #FE5E21 0%, #0565F3 100%);
+              background-image: -o-linear-gradient(bottom, #FE5E21 0%, #0565F3 100%);
+              background-image: linear-gradient(to top, #FE5E21 0%, #0565F3 100%);
+            }
+         @keyframes slideIn {
+          0% {
+            transform: translateX(500px) scale(.2);
+          }
+          100% {
+            transform: translateX(0px) scale(1);
+          }
+        }
+
+        @keyframes slideUp {
+          0% {
+            transform: translateY(300px);
+          }
+          100% {
+            transform: translateY(0px);
+          }
+        }
+
+        @keyframes expand {
+          0% {
+            transform: translateX(1400px);
+          }
+          100% {
+            transform: translateX(0px);
+          }
+        }
+        input[type=number] {
+        /*for absolutely positioning spinners*/
+        position: relative;
+        padding: 5px;
+        padding-right: 25px;
+      }
+
+      input[type=number]::-webkit-inner-spin-button,
+      input[type=number]::-webkit-outer-spin-button {
+        opacity: 1;
+      }
+
+      input[type=number]::-webkit-outer-spin-button,
+      input[type=number]::-webkit-inner-spin-button {
+        -webkit-appearance: inner-spin-button !important;
+        width: 25px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+      }
+        .row {
+          display: -ms-flexbox; /* IE10 */
+          display: flex;
+          -ms-flex-wrap: wrap; /* IE10 */
+          flex-wrap: wrap;
+          margin: 0 -16px;
+        }
+
+        input[type=text] {
+          width: 100%;
+          margin-bottom: 20px;
+          padding: 12px;
+          border: 1px solid #ccc;
+          border-radius: 3px;
+        }
+
+        label {
+          margin-bottom: 10px;
+          font-size: 18px;
+          font-weight: 500;
+          display: block;
+        }
+            .column {
+              flex: 25%;
+              padding: 15px;
+              visibility: visible;
+            }
+            .footer .heading {
+              color: #fefefe;
+              max-width: 1010px;
+              width: 90%;
+              text-transform: uppercase;
+              margin: 0 auto;
+              margin-bottom: 3rem;
+              font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+            }
+
+            .footer .content {
+              display: flex;
+              justify-content: space-evenly;
+              margin: 1.5rem;
+            }
+
+            .footer .content p {
+              margin-bottom: 1.3rem;
+            }
+
+            .footer .content a {
+              text-decoration: none;
+              color: #002;
+            }
+
+            .footer .content a:hover {
+              border-bottom: 1px solid #0565F3;
+            }
+
+            .footer .content h4 {
+              margin-bottom: 1.3rem;
+              font-size: 19px;
+            }
+
+            footer {
+              text-align: center;
+              margin-bottom: 2rem;
+            }
+
+            footer hr {
+              margin: 2rem 0;
+            }
+
+            @media (max-width: 767px) {
+              .footer .content {
+                display: flex;
+                flex-direction: column;
+                font-size: 14px;
+              }
+
+              .footer {
+                position: unset;
+              }
+            }
+
+            @media (min-width: 768px) and (max-width: 1024px) {
+              .footer .content,
+              .footer {
+                font-size: 14px;
+              }
+            }
+
+            @media (orientation: landscape) and (max-height: 500px) {
+              .footer {
+                position: unset;
+              }
+            }
+            .upper ul {
+              list-style-type: none;
+              margin: 0;
+              padding: 0;
+              overflow: hidden;
+            }
+            .upper li {
+              float: left;
+            }
+            .upper li a {
+              display: flex;
+              color: #002;
+              text-align: center;
+              padding: 14px 16px;
+              text-decoration: none;
+            }
+            .upper li a:hover:not(.active) {
+              background: transparent;
+              overflow: hidden;
+              background-image: -webkit-gradient(linear, left bottom, left top, from(#FE703A), to(#0565F3));
+              background-image: -webkit-linear-gradient(bottom, #FE703A 15%, #0565F3 74%);
+              background-image: -moz-linear-gradient(bottom, #FE703A 15%, #0565F3 74%);
+              background-image: -o-linear-gradient(bottom, #FE703A 15%, #0565F3 74%);
+              background-image: linear-gradient(to top, #FE703A 15%, #0565F3 74%);
+              color: #fff;
+            }
+            .active {
+              background-color: #04AA6D;
+            }
+            .search {
+              width: 100%;
+              position: relative;
+              display: flex;
+            }
+
+            .searchTerm {
+              width: 100%;
+              border: 3px solid #fe7f25;
+              border-left: none;
+              padding: 5px;
+              height: 36px;
+              border-radius: 0 5px 5px 0;
+              outline: none;
+              color: #9DBFAF;
+            }
+
+            .searchTerm:focus{
+              color: #00B4CC;
+            }
+            #upper ul{
+                list-style-type: none;
+                display: flex;
+                justify-content: center;
+                padding: 0;
+            }
+
+            #upper li {
+                display: list-item;
+            }
+
+            #upper li:first-child {
+              float: left;
+              color: #fff;
+            }
+
+            #upper li:last-child {
+              float: right;
+              margin-left:auto;
+              margin-right: 1%;
+            }
+
+            .searchButton {
+              width: 40px;
+              height: 36px;
+              border: 1px solid #0565F3;
+              background: #0565F3;
+              text-align: center;
+              color: #fff;
+              border-radius: 5px 0 0 5px;
+              cursor: pointer;
+              font-size: 20px;
+            }
+
+            /*Resize the wrap to see the search bar change!*/
+            .wrap{
+              width: 30%;
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+            }
+            .col_checkout {
+                float: left;
+                width: 33%;
+              }
+            .instruction, #tariffs{
+                width: 51%;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 95px;
+                color: #000001;
+            }
+            #instruction_show, #instruction_create_order, .China_content_show, .International_content_show, .Save_content_show, .Ukraine_content_show{
+                width: 50%;
+                margin-left: auto;
+                margin-right: auto;
+                visibility: visible;
+                align-items: center;
+                justify-content: center;
+            }
+            .store, #currentShop, .services_content, #cartShop, #favouriteShop{
+                width: 50%;
+                margin-left: auto;
+                margin-right: auto;
+                visibility: visible;
+            }
+            @import url('https://fonts.googleapis.com/css?family=Abril+Fatface');
+
+            .delivery_main ol {
+              list-style: none;
+              counter-reset: my-awesome-counter;
+              display: flex;
+              flex-wrap: wrap;
+              margin: 0;
+              padding: 0;
+            }
+            .delivery_main ol li {
+              counter-increment: my-awesome-counter;
+              display: flex;
+              width: 100%;
+              font-size: 0.95rem;
+              margin-bottom: 0.25rem;
+            }
+            .delivery_main ol li:before {
+              content: '';
+              font-size: 4rem;
+              margin-right: 1.5rem;
+              font-family: 'Abril Fatface', serif;
+              line-height: 1;
+            }
+            .delivery_main li:before {
+              content: '';
+              display: inline-block;
+              height: 60px;
+              width: 60px;
+              position: relative;
+              left: -6px;
+              top: -6px;
+              z-index: -1;
+            }
+
+            .delivery_sentence ol {
+              list-style: none;
+              counter-reset: my-awesome-counter;
+              display: flex;
+              flex-wrap: wrap;
+              margin: 0;
+              padding: 0;
+            }
+            .delivery_sentence ol li {
+              counter-increment: my-awesome-counter;
+              display: flex;
+              width: 50%;
+              font-size: 0.95rem;
+              margin-bottom: 0.5rem;
+            }
+            .delivery_sentence ol li::before {
+              content: '';
+              font-size: 4rem;
+              margin-right: 1.5rem;
+              font-family: 'Abril Fatface', serif;
+              line-height: 1;
+            }
+            .delivery_sentence li:before {
+              content: '';
+              display: inline-block;
+              height: 60px;
+              width: 60px;
+              position: relative;
+              left: -6px;
+              top: -6px;
+              z-index: -1;
+            }
+            .classic_ol ol{
+              list-style: none;
+              counter-reset: my-awesome-counter;
+              display: flex;
+              flex-wrap: wrap;
+              margin: 0;
+              padding: 0;
+            }
+            .classic_ol ol li {
+              counter-increment: my-awesome-counter;
+              display: flex;
+              width: 50%;
+              font-size: 0.95rem;
+              margin-bottom: 0.5rem;
+            }
+            .classic_ol ol li::before {
+              content: counter(my-awesome-counter);
+              font-size: 4rem;
+              margin-right: 1.5rem;
+              font-family: 'Abril Fatface', serif;
+              line-height: 1;
+            }
+            li.register_icon:before {
+                background: url('images/icons/241-2415195_register-icon-register-icon.png') no-repeat left center;
+                background-size: 100%;
+                margin-bottom: 25px;
+            }
+            li.order_icon:before {
+                background: url('images/icons/8691fdb2a994bb2a6ec2cbf01bbc6477.png') no-repeat left center;
+                background-size: 100%;
+                margin-bottom: 25px;
+            }
+            li.pay_order_icon:before {
+                background: url('images/icons/1089.png') no-repeat left center;
+                background-size: 100%;
+                margin-bottom: 25px;
+            }
+            li.buy_shop_icon:before {
+                background: url('images/icons/121-1218413_buy-now-round-no-fill-repeated-sales-icon.png') no-repeat left center;
+                background-size: 100%;
+                margin-bottom: 25px;
+            }
+            li.address_shop_icon:before {
+                background: url('images/icons/address-shop-icon.png') no-repeat left center;
+                background-size: 100%;
+                margin-bottom: 25px;
+            }
+            li.tracking_icon:before {
+                background: url('images/icons/tracking-order-icon.png') no-repeat left center;
+                background-size: 100%;
+                margin-bottom: 25px;
+            }
+            li.get_order_icon:before {
+                background: url('images/icons/getting-order-icon.png') no-repeat left center;
+                background-size: 100%;
+                margin-bottom: 25px;
+            }
+            li.flight_icon:before {
+                background: url('images/icons/flight-logo-design-flight-logos-unique-elegant-shapes-colors-130211692.png') no-repeat left center;
+                background-size: 100%;
+                margin-bottom: 25px;
+            }
+            .button_1{
+                border: 5px solid #0565F3;
+                font-size: 20px;
+                border-radius: 25px;
+                background: #6b6bff;
+                cursor: pointer;
+                padding: 1.1em 1.6em;
+                transition: all 0.1s ease-in-out;
+                background-image: linear-gradient(315deg, #FE703A 15%, #0565F3 74%);
+            }
+            .button_1:hover{
+                background: #9bc1fa;
+                color: #fff;
+                border: 5px solid #0565F3;
+                transition: all 0.1s ease-in-out;
+            }
+            .button_1:active{
+                background: #254c72;
+                color: #fff;
+            }
+
+            .button_1:hover:before{
+              animation: opacityFallbackIn 0s step-start forwards;
+            }
+            #navbar_menu{
+                left: 50%;
+            }
+            .question {
+                margin-top: 25px;
+                margin-bottom: 25px;
+                width: 48%;
+                margin-left: auto;
+                margin-right: auto;
+                visibility: visible;
+                animation-name: fadeInUp;
+            }
+            .question ul {
+              list-style-type: none;
+              padding: 0;
+            }
+
+            .question li {
+              font-family: sans-serif;
+              font-size: 1.25rem;
+              padding: 16px 0;
+            }
+
+            .question li:not(:last-of-type) {
+
+              border-bottom: 1px solid #254c72;
+            }
+
+            #question ul {
+              list-style: none;
+              counter-reset: my-awesome-counter;
+              display: flex;
+              flex-wrap: wrap;
+              margin: 0;
+              padding: 0;
+            }
+            #question ul li {
+              counter-increment: my-awesome-counter;
+              display: flex;
+              width: 50%;
+              font-size: 0.8rem;
+              margin-bottom: 0.5rem;
+            }
+            #question ul li::before {
+              content: "0" counter(my-awesome-counter);
+              font-weight: bold;
+              font-size: 3rem;
+              margin-right: 0.5rem;
+              font-family: 'Abril Fatface', serif;
+              line-height: 1;
+            }
+            .checkform{
+                width: 49.3%;
+                background-color: #fe7f25;
+                border: 5px solid #E6EFFD;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 95px;
+                border-radius: 20px;
+                color: #fff;
+            }
+            label {
+              margin-bottom: 10px;
+              font-size: 18px;
+              font-weight: 500;
+              display: block;
+            }
+            .row_checkform {
+                  display: -webkit-box;
+                  display: -webkit-flex;
+                  display: -moz-box;
+                  display: -ms-flexbox;
+                  display: flex;
+                  -webkit-flex-wrap: wrap;
+                  -ms-flex-wrap: wrap;
+                  flex-wrap: wrap;
+                }
+                .row-space {
+                  -webkit-box-pack: justify;
+                  -webkit-justify-content: space-between;
+                  -moz-box-pack: justify;
+                  -ms-flex-pack: justify;
+                  justify-content: space-between;
+                }
+                .col-2 {
+                  width: -webkit-calc((100% - 20px) / 2);
+                  width: -moz-calc((100% - 20px) / 2);
+                  width: calc((100% - 20px) / 2);
+                }
+            .value_weight {
+              border: 2px dashed #E6EFFD;
+              text-align: left;
+              font-weight: bold;
+              font-size: 5em;
+              text-align: center;
+              width: 100%;
+              height: 100px;
+              margin-bottom: 25px;
+              letter-spacing: -.07em;
+            }
+            input[type="range"] {
+              display: block;
+              -webkit-appearance: none;
+              background-color: #bdc3c7;
+              width: 100%;
+              height: 5px;
+              border-radius: 5px;
+              margin: 0 auto;
+              outline: 0;
+            }
+            input[type="range"]::-webkit-slider-thumb {
+              -webkit-appearance: none;
+              background-color: #8fd3fe;
+              width: 30px;
+              height: 30px;
+              border-radius: 50%;
+              border: 2px solid white;
+              cursor: pointer;
+              transition: .3s ease-in-out;
+            }​
+              input[type="range"]::-webkit-slider-thumb:hover {
+                background-color: white;
+                border: 2px solid #8fd3fe;
+              }
+              input[type="range"]::-webkit-slider-thumb:active {
+                transform: scale(1.6);
+              }
+                .section-title{
+                    font-size: 1.7rem;
+                    font-weight: 575;
+                    text-align: center;
+                    margin-bottom: 1.5rem
+                }
+                .store{
+                    margin-top: 2rem;
+                }
+                .store-content{
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(200px,auto));
+                    /* grid-template-columns: repeat(4, 1fr);
+                    grid-auto-rows: minmax(200px, auto);*/
+                    gap: 1.5rem;
+                    margin-left: 15px;
+                    margin-right: 15px;
+                }
+                .product-box{
+                    position:relative;
+                }
+                .product-box:hover{
+                    padding: -10px;
+                    border: 1px solid blue;
+                    transition: 0.5s;
+                    transform: scale(1.05);
+                }
+                .product-box:hover::after{
+                    transition: 0.5s;
+                    transform: scale(1.05);
+                }
+                .product-img{
+                    width: 50%;
+                    height: auto;
+                    margin-bottom: 0.5rem;
+                    border-radius: 20px;
+                }
+                .product-title{
+                    font-size: 1.1rem;
+                    font-weight:575;
+                    margin-bottom:0.5rem;
+                }
+                .price{
+                    font-weight: 500;
+                }
+                .cart_interface {
+                  background: #fff;
+                  margin: 25px auto;
+                  -webkit-box-orient: vertical;
+                  -webkit-box-direction: normal;
+                  flex-direction: column;
+                  border-radius: 4px;
+                  box-shadow: 0 2px 25px rgba(0, 0, 0, 0.2);
+                }
+
+                .form_delivery_interface, #info_delivery_show {
+                  background: #fff;
+                  margin: 25px auto;
+                  -webkit-box-orient: vertical;
+                  -webkit-box-direction: normal;
+                  flex-direction: column;
+                  border-radius: 4px;
+                  box-shadow: 0 2px 25px rgba(0, 0, 0, 0.2);
+                  margin:50px auto;
+                  padding:20px;
+                }
+                .form_delivery_interface label{
+                  display:block;
+                  margin:1em 0 .2em;
+                }
+                .form_delivery_interface input, .form_delivery_interface select, .form_delivery_interface textarea{
+                  display:block;
+                  width:100%;
+                  padding:.3em;
+                  font-size:20px;
+                  background-color:#fbfbfb;
+                  border:solid 1px #CCC;
+                  resize:vertical;
+                }
+                .form_delivery_interface select{
+                  color:indigo;
+                }
+                .form_delivery_interface option{
+                  color:blue;
+                  background: #9bc1fa;
+                }
+                .form_delivery_interface input[type=button]{
+                  background:#0565F3;
+                  margin:1em 0 0;
+                  color:white;
+                  border:none;
+                  border-radius:8px;
+                  transition:all .3s ease-out;
+                }
+
+                .form_delivery_interface input:focus,
+                .form_delivery_interface input:hover,
+                .form_delivery_interface select:focus,
+                .form_delivery_interface select:hover,
+                .form_delivery_interface textarea:focus,
+                .form_delivery_interface textarea:hover{
+                  background: #9bc1fa;
+                }
+
+                /* hover and focus states */
+                .form_delivery_interface input[type=button]:hover,
+                .form_delivery_interface input[type=button]:focus{
+                  background: #FC5400;
+                  outline:none;
+                }
+
+                @media screen and (min-width:600px) {
+                  /*  make the form 2 columns */
+                  .form_delivery_interface form:after{
+                    content:'';
+                    display:block;
+                    clear:both;
+                  }
+                  .form_delivery_interface_column{
+                    width:50%;
+                    padding:1em;
+                    float:left;
+                  }
+                }
+                @media (max-width: 767px) {
+                    .col-2 {
+                        width: 100%;
+                      }
+                }
+                .input-group {
+                  position: relative;
+                  margin-bottom: 23px;
+                }
+                .label {
+                  font-size: 18px;
+                  color: #fff;
+                  padding-left: 8px;
+                  text-transform: capitalize;
+                  display: block;
+                  font-weight: 700;
+                  margin-bottom: 12px;
+                }
+              .login-form {
+                  background: #fff;
+                  width: 30em;
+                  margin: 65px auto;
+                  display: -webkit-box;
+                  display: flex;
+                  -webkit-box-orient: vertical;
+                  -webkit-box-direction: normal;
+                  flex-direction: column;
+                  border-radius: 4px;
+                  box-shadow: 0 2px 25px rgba(0, 0, 0, 0.2);
+                }
+                .login-form h1 {
+                  padding: 35px 35px 0 35px;
+                  font-weight: 300;
+                }
+                .login-form .content {
+                  padding: 35px;
+                  text-align: center;
+                }
+                .login-form .input-field {
+                  padding: 12px 5px;
+                }
+                .login-form .input-field input {
+                  font-size: 16px;
+                  display: block;
+                  font-family: 'Rubik', sans-serif;
+                  width: 100%;
+                  padding: 10px 1px;
+                  border: 0;
+                  border-bottom: 1px solid #747474;
+                  outline: none;
+                  -webkit-transition: all .2s;
+                  transition: all .2s;
+                }
+                .login-form .input-field input::-webkit-input-placeholder {
+                  text-transform: uppercase;
+                }
+                .login-form .input-field input::-moz-placeholder {
+                  text-transform: uppercase;
+                }
+                .login-form .input-field input:-ms-input-placeholder {
+                  text-transform: uppercase;
+                }
+                .login-form .input-field input::-ms-input-placeholder {
+                  text-transform: uppercase;
+                }
+                .login-form .input-field input::placeholder {
+                  text-transform: uppercase;
+                }
+                .login-form .input-field input:focus {
+                  border-color: #222;
+                }
+                .login-form a.link {
+                  text-decoration: none;
+                  color: #747474;
+                  letter-spacing: 0.2px;
+                  text-transform: uppercase;
+                  display: inline-block;
+                  margin-top: 20px;
+                }
+                .login-form .action {
+                  display: -webkit-box;
+                  display: flex;
+                  -webkit-box-orient: horizontal;
+                  -webkit-box-direction: normal;
+                          flex-direction: row;
+                }
+                .login-form .action button {
+                  width: 100%;
+                  border: none;
+                  padding: 18px;
+                  font-family: 'Rubik', sans-serif;
+                  cursor: pointer;
+                  text-transform: uppercase;
+                  background: #e8e9ec;
+                  color: #777;
+                  border-bottom-left-radius: 4px;
+                  border-bottom-right-radius: 0;
+                  letter-spacing: 0.2px;
+                  outline: 0;
+                  -webkit-transition: all .3s;
+                  transition: all .3s;
+                }
+                .login-form .action button:hover {
+                  background: #d8d8d8;
+                }
+                .login-form .action button:nth-child(2) {
+                  background: #0565F3;
+                  color: #fff;
+                  border-bottom-left-radius: 0;
+                  border-bottom-right-radius: 4px;
+                }
+                .login-form .action button:nth-child(2):hover {
+                  background: #3c4d6d;
+                }
+                select {
+                  appearance: none;
+                  background-color: transparent;
+                  border: none;
+                  padding: 0 1em 0 0;
+                  margin: 0;
+                  width: 100%;
+                  font-family: inherit;
+                  font-size: inherit;
+                  cursor: inherit;
+                  line-height: inherit;
+                  z-index: 1;
+                  outline: none;
+                }
+
+                .select {
+                  display: grid;
+                  grid-template-areas: "select";
+                  align-items: center;
+                  position: relative;
+                  min-width: 15ch;
+                  max-width: 30ch;
+                  border: 1px solid var(--select-border);
+                  border-radius: 0.25em;
+                  padding: 0.25em 0.5em;
+                  font-size: 1.25rem;
+                  cursor: pointer;
+                  line-height: 1.1;
+                  background-color: #fff;
+                  background-image: linear-gradient(to top, #f9f9f9, #fff 33%);
+                }
+                .select select,
+                .select::after {
+                  grid-area: select;
+                }
+                .select:not(.select--multiple)::after {
+                  content: "";
+                  justify-self: end;
+                  width: 0.8em;
+                  height: 0.5em;
+                  background-color: var(--select-arrow);
+                  clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+                }
+                select:focus + .focus {
+                  position: absolute;
+                  top: -1px;
+                  left: -1px;
+                  right: -1px;
+                  bottom: -1px;
+                  border: 2px solid var(--select-focus);
+                  border-radius: inherit;
+                }
+                select[multiple] {
+                  padding-right: 0;
+                  /*
+                   * Safari will not reveal an option
+                   * unless the select height has room to
+                   * show all of it
+                   * Firefox and Chrome allow showing
+                   * a partial option
+                   */
+                  height: 6rem;
+                  /*
+                   * Experimental - styling of selected options
+                   * in the multiselect
+                   * Not supported crossbrowser
+                   */
+                }
+                select[multiple] option {
+                  white-space: normal;
+                  outline-color: var(--select-focus);
+                }
+                .select--disabled {
+                  cursor: not-allowed;
+                  background-color: #eee;
+                  background-image: linear-gradient(to top, #ddd, #eee 33%);
+                }
+                /* animation class and keyframes */
+                .overflow-hidden {
+                 overflow: hidden;
+                }
+
+                .a_effect{
+                    -webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px; background: transparent; overflow: hidden; background-image: -webkit-gradient(linear, left bottom, left top, from(#0565F3), to(#FE5E21));
+                    background-image: -webkit-linear-gradient(bottom, #FE5E21 0%, #0565F3 100%);
+                    background-image: -moz-linear-gradient(bottom, #FE5E21 0%, #0565F3 100%);
+                    background-image: -o-linear-gradient(bottom, #FE5E21 0%, #0565F3 100%);
+                    background-image: linear-gradient(to top, #FE5E21 0%, #0565F3 100%);
+                    border-style: solid solid solid solid;
+                    border-color: #002;
+                    color: #fff;
+                }
+                a.a_effect, a.a_effect:visited, a.a_effect:hover,a.a_effect:active{
+                  -webkit-backface-visibility:hidden;
+                    backface-visibility:hidden;
+                    position:relative;
+                    transition:0.5s color ease;
+                    text-decoration:none;
+                    color:#fff;
+                    font-size:2.5em;
+                    box-shadow: inset 0 0 0 0 #0565F3;
+                    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+                }
+                a.a_effect:hover{
+                   color:#fff;
+                   box-shadow: inset 25em 0 0 0 #0565F3;
+                }
+                .icon {
+                  position: relative;
+                  color: #fff;
+                  transition: .5s;
+                  z-index: 3;
+                }
+                a.a_effect:hover .icon {
+                  color: #fff;
+                  transform: rotateZ(360deg);
+                }
+                .total{
+                    display: flex;
+                    justify-content: flex-end;
+                    margin-top: 1.5rem;
+                    border-top: 1px solid black;
+                }
+                .total-title{
+                    font-size: 1rem;
+                    font-weight: 575;
+                }
+                .total-price{
+                    margin-left: 0.25rem;
+                }
+                .cart-title {
+                    text-align:center;
+                    font-weight: 600;
+                    margin-top: 2rem;
+                }
+                .cart-remove{
+                    font-size: 24px;
+                    color: black;
+                    cursor: pointer;
+                }
+                .select_languages .parent {
+                    display: block;
+                    position: relative;
+                    float: left;
+                }
+
+                .select_languages .parent a {
+                    color: #002;
+                    text-decoration: none;
+                }
+
+                .select_languages .parent:hover > ul {
+                    display: block;
+                    position: absolute;
+                }
+
+                .select_languages .child {
+                    display: none;
+                }
+
+                .select_languages .child li {
+                    background-color: #6b6bff;
+                    line-height: 30px;
+                    border-bottom: #CCC 1px solid;
+                    border-right: #CCC 1px solid;
+                    width: 100%;
+                }
+
+                .select_languages .child li a {
+                    color: #002;
+                }
+
+                .select_languages ul {
+                    list-style: none;
+                    margin: 0;
+                    padding: 0px;
+                    min-width: 3em;
+                }
+
+                .select_languages ul ul ul {
+                    left: 100%;
+                    top: 0;
+                    margin-left: 1px;
+                }
+
+                .select_languages li:hover {
+                    background-color: #6b6bff;
+                }
+
+                .select_languages .parent li:hover {
+                    background-color: #6b6bff;
+                }
+
+                .select_languages .expand {
+                    font-size: 12px;
+                    float: right;
+                    margin-right: 5px;
+                }
+                #favourite-shop i, #cart-shop i, #loginButton i{
+                    color: #0565F3;
+                }
+                #favourite-shop i:hover, #cart-shop i:hover, #loginButton i:hover{
+                    color: #fff;
+                }
+                @-webkit-keyframes shiny-btn1 {
+                    0% { -webkit-transform: scale(0) rotate(45deg); opacity: 0; }
+                    80% { -webkit-transform: scale(0) rotate(45deg); opacity: 0.5; }
+                    81% { -webkit-transform: scale(4) rotate(45deg); opacity: 1; }
+                    100% { -webkit-transform: scale(50) rotate(45deg); opacity: 0; }
+                }
+                .drop-in {
+                 animation: drop-in 1s ease 200ms backwards;
+                }
+                .drop-in-2 {
+                 animation: drop-in 1200ms ease 800ms backwards;
+                }
+                .wrapper {
+                  margin: 0 auto;
+                }
+                @keyframes drop-in {
+                 from {
+                  opacity: 0;
+                  transform: translateY(-50px);
+                 }
+                 to {
+                  opacity: 1;
+                  transform: translate(0px);
+                 }
+                }
+                @media (min-width: 0px) and (max-width: 900px){
+                    .checkform{
+                      width: 98%;
+                    }
+                    .column {
+                      flex: 100%;
+                      padding: 16px;
+                    }
+                    .checkform, #info_delivery_show{
+                      width: 98%;
+                    }
+                    .question {
+                        width: 95%;
+                    }
+                    .instruction, #instruction_create_order, .store, #currentShop, .services_content, #cartShop, #favouriteShop, .China_content_show, .International_content_show, .Save_content_show, .form_delivery_interface, .Ukraine_content_show, #tariffs{
+                      width: 98%;
+                    }
+                    #instruction_show{
+                        width: 78%;
+                    }
+                    #navbar_menu{
+                        left: 37%;
+                    }
+                    #international_sentence{
+                        width: 60%;
+                    }
+                    #nav-wrapper{
+                        width: 100%;
+                      }
+                }
+                @media (min-width: 901px) and (max-width: 1475px){
+                    .checkform{
+                      width: 98%;
+                    }
+                    .column {
+                      flex: 100%;
+                      padding: 16px;
+                    }
+                    .checkform, #info_delivery_show{
+                      width: 98%;
+                    }
+                    .question {
+                        width: 95%;
+                    }
+                    .instruction, #instruction_create_order, .store, #currentShop, .services_content, #cartShop, #favouriteShop, .China_content_show, .International_content_show, .Save_content_show, .form_delivery_interface, .Ukraine_content_show, #tariffs{
+                      width: 98%;
+                    }
+                    #instruction_show{
+                        width: 78%;
+                    }
+                    #navbar_menu{
+                        left: 42%;
+                    }
+                    #international_sentence{
+                        width: 62%;
+                    }
+                    #nav-wrapper{
+                        width: 100%;
+                      }
+                }
+                @media (min-width: 1476px){
+                    .checkform{
+                      width: 49.3%;
+                    }
+                    .column {
+                      flex: 25%;
+                      padding: 16px;
+                    }
+                    .question {
+                        width: 48%;
+                    }
+                    .checkform, #info_delivery_show{
+                      width: 49.3%;
+                    }
+                    .instruction, #instruction_create_order, .store, #currentShop, .services_content, #cartShop, #favouriteShop, .China_content_show, .International_content_show, .Save_content_show, .form_delivery_interface, .Ukraine_content_show, #tariffs{
+                      width: 49%;
+                    }
+                    #instruction_show{
+                        width: 50%;
+                    }
+                    #navbar_menu{
+                        left: 50%;
+                    }
+                    #international_sentence{
+                        width: 90%;
+                    }
+                    #nav-wrapper{
+                        width: 50%;
+                      }
+                }
+                @media (max-width: 800px) {
+                  .row {
+                    flex-direction: column-reverse;
+                  }
+                  .slide-content{
+                    margin: 0 10px;
+                  }
+                  .swiper-navBtn{
+                    display: none;
+                  }
+                }
+                @media screen (min-height: 30em) and (max-height: 70em) {
+                  .footer {
+                      position:fixed;
+                       left:0px;
+                       bottom:0px;
+                    }
+                }
+                @keyframes click-wave {
+                  0% {
+                    height: 40px;
+                    width: 40px;
+                    opacity: 0.35;
+                    position: relative;
+                  }
+                  100% {
+                    height: 200px;
+                    width: 200px;
+                    margin-left: -80px;
+                    margin-top: -80px;
+                    opacity: 0;
+                  }
+                }
+    </style>
+</head>
+<body>
+<header class="nav-wrapper">
+    <div id="nav-wrapper">
+        <nav class="upper">
+        <ul>
+            <div class="select_languages">
+                <li class="parent"><a>UA</a>
+                    <ul class="child">
+                        <li><a>EN</a></li>
+                    </ul>
+                </li>
+            </div>
+            <li style="position: absolute;transform: translateX(-50%);" id="navbar_menu"><ul>
+                <div>
+                    <li><a id="shop_content">Магазин</a></li>
+                    <li><a id="content_Alibaba_header">Alibaba</a></li>
+                    <li><a id="content_Wechat_header">WeChat</a></li>
+                    <li><a id="content_Tmail_header">Tmail</a></li>
+                    <li><a id="tariffs_navbar">Тарифи</a></li>
+                </div>
+            </ul></li>
+            <li style="right:0; position: absolute;"><a id="instructions_menu">Інструкція</a></li>
+        </ul>
+        <ul>
+            <li style="float:left; margin-left:20px;"><img id="logo" src="images/icons/logo_kdg_black.png" width="300px"/> </li>
+            <li>
+                <div class="wrap">
+                   <div class="search">
+                       <button type="submit" class="searchButton">
+                        <i class="fa fa-search"></i>
+                     </button>
+                      <input type="text" class="searchTerm" placeholder="Що ви шукаєте?">
+                   </div>
+                </div>
+            </li>
+            <div style="display: flex; justify-content: flex-end; vertical-align: middle; position: absolute; left:88%; top: 47%; transform: translate(-50%, -50%);">
+                <li><a style="text-align:center; display: block;" id="favourite-shop"><i class="fa-solid fa-heart fa-2xl"></i><div style="margin-top: 8px;">Обране</div></a></li>
+                <li><a style="text-align:center; display: block;" id="cart-shop"><i class="fa-solid fa-cart-shopping fa-2xl"></i><div style="margin-top: 8px;">Кошик</div></a></li>
+                <li><a style="text-align:center; display: block;" id="loginButton"><i class="fa-solid fa-circle-user fa-2xl"></i><div style="margin-top: 8px;">Увійти</div></a></li>
+            </div>
+        </ul>
+        <ul>
+            <div style="display: flex; justify-content: center; width: 100%;">
+                <li><a id="info_delivery_click">Інформація про доставку</a></li>
+                <li><a id="question_delivery">Як оформити доставку</a></li>
+                <li><a id="services_click">Послуги</a></li>
+                <li><a id="tips">FAQ та поради</a></li>
+            </div>
+        </ul>
+    </nav>
+    </div>
+    <div style="display: flex; justify-content: center; border-style: groove hidden hidden hidden; border-width: 2px; width: 100%; margin-top: 1px;">
+    </div>
+</header>
+<div class="question drop-in" id="question_show" style="margin-top: 90px;">
+
+</div>
+<div class="question" id="question_show_menu" style="margin-top: 90px;">
+    <h1 style="font-size: 30px; text-align:center; color:#000001;">Є питання?</h1>
+    <div class="row">
+        <div class="column animated fadeInUp" style="border: 5px solid #E6EFFD; text-align: center;" id="col1">
+           <h2 style="font-size: 25px; color: #fff; padding: 6px 8px; text-align: center;">Як замовити на Alibaba? </h2>
+           <div id="answer1" style="color: #fff; margin-left: 10px; margin-right: 20px; font-size: 16px;"></div>
+              <p align='justify' data-aos-duration='1000' style="color: #fff; margin-left: 10px; margin-right: 20px; font-size: 16px; text-align: center;"><br>На сайті Alibaba проводяться угоди між постачальниками – експортерами, і покупцями – клієнтами, імпортерами продукції.</p>
+              <button class="button_1" style="margin-top: auto;vertical-align: bottom;" id="content_Alibaba">Читати більше</button>
+          </div>
+        <div class="column animated fadeInUp" style="border: 5px solid #E6EFFD; text-align: center;" id="col2">
+           <h2 style="font-size: 25px; color: #fff; padding: 6px 8px; text-align: center;">Як замовити на WeChat? </h2>
+           <div id="answer2" style="color: #fff; margin-left: 10px; margin-right: 20px; font-size: 16px;"></div>
+              <p align='justify' data-aos-duration='1000' style="color: #fff; margin-left: 10px; margin-right: 20px; font-size: 16px; text-align: center;"><br>Зручний пошук, якісний опис та фотографії, а також пряме спілкування з продавцем дозволяють швидко робити вигідні покупки.</p>
+              <button class="button_1" style="margin-top: auto;vertical-align: bottom;" id="content_WeChat">Читати більше</button>
+          </div>
+        <div class="column animated fadeInUp" style="border: 5px solid #E6EFFD; text-align: center;" id="col3">
+            <h2 style="font-size: 25px; color: #fff; padding: 6px 8px; text-align: center;">Як замовити на Tmail?</h2>
+           <div id="answer3" style="color: #fff; margin-left: 10px; margin-right: 20px; font-size: 16px;"></div>
+                <p align='justify' data-aos-duration='1000' style="color: #fff; margin-left: 10px; margin-right: 20px; font-size: 16px; text-align: center;"><br>У розділі Tmall на цей час передбачена швидша доставка, а асортимент включає брендові речі: техніку, одяг, товари для дітей.</p>
+                <button class="button_1" style="margin-top: auto;vertical-align: bottom;" id="content_Tmail">Читати більше</button>
+          </div>
+        <div class="column animated fadeInUp" style="border: 5px solid #E6EFFD; text-align: center;" id="col4">
+           <h2 style="font-size: 25px; color: #fff; padding: 6px 8px; text-align: center;">Як замовити на Aliexpress?</h2>
+           <div id="answer4" style="color: #fff; margin-left: 10px; margin-right: 20px; font-size: 16px;"></div>
+              <p align='justify' data-aos-duration='1000' style="color: #fff; margin-left: 10px; margin-right: 20px; font-size: 16px; text-align: center;"><br>Відгуки на Aliexpress можна перекласти на різні мови. Втім, українська працює некоректно, тож краще використовувати англійську мову.</p>
+              <button class="button_1" style="margin-top: auto;vertical-align: bottom;" id="content_Aliexpress">Читати більше</button>
+          </div>
+	</div>
+</div>
+<div style="margin-bottom: 25px;">
+    <div id="instruction" class="instruction">
+        <div class="overflow-hidden">
+            <table>
+                <tr>
+                    <td>
+                        <p style='font-family: Verdana; font-size: 30px; font-weight:700; text-align: center;padding: 14px 16px; margin-top: 30px;'>Як працює доставка?</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="delivery_main">
+                            <ol style="margin-bottom: 45px;">
+                                <li class="register_icon"><p style="font-size: 16px; margin-right: 17px; text-align: justify; margin-top: 10px; margin-right: 50px;">Зареєструйся на KDG China;</p></li>
+                                <li class="address_shop_icon"><p style="font-size: 16px; margin-right: 17px; text-align: justify; margin-top: 10px; margin-right: 50px;">Отримуй міжнародну адресу для шопінгу;</p></li>
+                                <li class="buy_shop_icon"><p style="font-size: 16px; margin-right: 17px; text-align: justify; margin-top: 10px;">Купуй у будь-якому китайському магазині на свою адресу KDG China;</p></li>
+                                <li class="tracking_icon"><p style="font-size: 16px; margin-right: 17px; text-align: justify; margin-top: 10px;">Відстежуй свою відправку;</p></li>
+                                <li class="get_order_icon"><p style="font-size: 16px; margin-right: 17px; text-align: justify; margin-top: 10px; margin-right: 50px;">Отримай замовлення.</p></li>
+                            </ol>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div class="form_delivery_interface" id="checkform">
+    <form>
+  <h1 style="text-align: center;">Калькулятор вартості доставки</h1>
+  <div class="form_delivery_interface_column">
+    <label>З якої країни треба доставити вантаж?</label>
+    <select name="country_start" id="start_delivery">
+        <option value="">...</option>
+        <option value="China_country">Китай</option>
+      </select>
+
+    <label>Категорія вантажу</label>
+    <select name="category">
+        <option value="">...</option>
+        <option value="web">.</option>
+      </select>
+
+    <label>Виберіть швидкість доставки</label>
+    <select name="vehicle" id="type_vehicle">
+    <option value="">...</option>
+    <option value="airdelivery">Авіа</option>
+    <option value="seadelivery">Морем</option>
+    <option value="vehicledelivery">Транспортом</option>
+  </select>
+      <p id="info_vehicle" style="margin-bottom: 60px;">.</p>
+      <label for="the-name">Ваше ім'я</label>
+      <input type="text" name="name" id="the-name">
+      <label for="the-phone">Номер телефону</label>
+      <input type="tel" name="phone" id="the-phone">
+      <label id="total" style="font-family:Cousine; font-size: 50px; margin: 50px auto; font-weight: bold; text-align: center; vertical-align: middle;">0.00 <i class="fa-solid fa-dollar-sign fa-xs"></i></label>
+  </div>
+  <div class="form_delivery_interface_column">
+      <label>До якої країни треба доставити вантаж?</label>
+      <select name="country_destination" id="destination">
+        <option value="">...</option>
+        <option value="Ukraine_country">Україна</option>
+        <option value="EU_union">ЄС</option>
+      </select>
+    <label>Поточна вага в кг</label>
+    <input type="number" min="0" max="40" id="weight">
+      <label>Послуги</label>
+      <select name="services_input" id="services_input">
+        <option value="">...</option>
+        <option value="redemption">Викуп вантажу</option>
+        <option value="inspection">Перевірка вантажу</option>
+        <option value="insurance">Страхування</option>
+      </select>
+      <img src="images/Image.png" id="result_img">
+        <img src="images/animations/output-onlinegiftools (12).gif" id="ship_img">
+        <img src="images/animations/output_onlinegiftools_plane2.gif" id="plane_img">
+        <img src="images/animations/output-onlinegiftools (14).gif" id="train_img">
+    <input type="button" value="Дізнатися вартість доставки" id="submit_delivery">
+
+  </div>
+    </form>
+</div>
+<div id="instruction_question_delivery" class="instruction" style="margin-bottom: 150px;">
+    <p style='font-family: Verdana; font-size: 30px; font-weight:700; text-align: center;padding: 14px 16px; margin-top: 45px;'>Як оформити доставку?</p>
+    <div class="delivery_sentence">
+        <ol>
+            <li class="register_icon">
+                <p style="font-size: 16px; margin-right: 17px; text-align: justify; margin-top: 10px; margin-right: 50px;">Зареєструватися;</p>
+            </li>
+            <li class="order_icon"><p style="font-size: 16px; margin-right: 17px; text-align: justify; margin-top: 10px; margin-left: 10px; margin-right: 50px;">Оформити замовлення;</p></li>
+            <li class="pay_order_icon"><p style="font-size: 16px; margin-right: 17px; text-align: justify; margin-top: 10px; margin-right: 75px;">Оплата замовлення;</p></li>
+            <li class="flight_icon"><p style="font-size: 16px; margin-right: 17px; text-align: justify; margin-top: 10px; margin-left: 10px; margin-right: 50px;">Ваша доставка вже на шляху.</p></li>
+        </ol>
+    </div>
+</div>
+<div id="faq_tips" style="display: flex; align-items: center; justify-content: center; visibility: visible; margin-bottom: 100px;">
+    <ul>
+        <li><h2 style="font-size: 25px; color: #000001; padding: 6px 8px; margin-top: 35px; margin-bottom: 5px; display: block; text-align: left;">Доставка</h2></li>
+        <li><a id="services_faq_instructions" class="a_effect before after" style="display: block; width: 600px; font-size: 25px; padding: 24px 26px; margin-bottom: 10px;">Послуги <div style="float: right;"><i class="fa-solid fa-plus fa-lg icon"></i></div></a></li>
+        <li><a id="content_Tmail_faq" class="a_effect before after" style="display: block; width: 600px; font-size: 25px; padding: 24px 26px; margin-bottom: 10px;">Самостійна покупка на Tmail <div style="float: right;"><i class="fa-solid fa-plus fa-lg icon"></i></div></a></li>
+        <li><a id="question_delivery_faq" class="a_effect before after" style="display: block; width: 600px; font-size: 25px; padding: 24px 26px; margin-bottom: 10px;">Як оформити доставку <div style="float: right;"><i class="fa-solid fa-plus fa-lg icon"></i></div></a></li>
+    </ul>
+</div>
+<div class="login-form" id="loginForm" style="margin-bottom: 150px;">
+    <form>
+        <h1 id="name_login">Вхід</h1>
+        <div class="content">
+            <div class="input-field">
+                <input type="text" placeholder="Ім'я користувача" autocomplete="nope" id="usernameInput">
+            </div>
+            <div class="input-field">
+                <input type="password" placeholder="Пароль" id="passwordInput">
+            </div>
+        </div>
+        <div class="action">
+            <button id="signInButton">Вхід</button>
+            <button id="registerButton">Реєстрація</button>
+        </div>
+    </form>
+</div>
+<div id="info_delivery_show">
+    <h1 style="text-align: center;">Інформація про доставку</h1>
+    <p style="padding: 14px 16px; line-height: 1.5em; text-align: justify; font-size: 16px;">Доставка - це процес транспортування вантажів від їх початкового місця розташування до заданого місця призначення. Вантажі в основному перевозяться автомобільним і залізничним транспортом наземним, морським і повітряним транспортом.<br>Сюди відносяться процеси зберігання товару, його навантаження, транспортування і доставки, а також контроль всіх цих процесів.<br>Ми можемо надати вам повний спектр послуг з фізичної охорони вантажів і забезпечити повне збереження вантажу в процесі транспортування і доставки.</p>
+    <div>
+        <h2><i class="fa-solid fa-plane-departure fa-sm"></i> Авіадоставка</h2>
+        <div class="form_delivery_interface_column">
+            <p style="color: #0565F3; margin-top: 15px;">З Китаю в Україну</p>
+            <p style="color: #0565F3; margin-top: 15px;">Термін доставки:</p>
+            <p style="color: #0565F3; margin-top: 15px;">Вага:</p>
+            <div style="margin-top: 45px;">
+                <p style="color: #0565F3; margin-top: 15px;">З Китаю в Європу</p>
+                <p style="color: #0565F3; margin-top: 15px;">Термін доставки:</p>
+                <p style="color: #0565F3; margin-top: 15px;">Вага:</p>
+            </div>
+        </div>
+        <div class="form_delivery_interface_column">
+            <p style="color: #0565F3; margin-top: 15px;"><b style="font-size: 18px; font-weight: 700; margin-left: 45px;">за $14/кг</b></p>
+            <p style="color: #0565F3; margin-top: 15px;"><b style="font-size: 18px; font-weight: 700; margin-left: 45px;">від 14 днів</b></p>
+            <p style="color: #0565F3; margin-top: 15px;"><b style="font-size: 18px; font-weight: 700; margin-left: 45px;">до 40 кг</b></p>
+            <div style="margin-top: 45px;">
+                <p style="color: #0565F3; margin-top: 15px;"><b style="font-size: 18px; font-weight: 700; margin-left: 45px;">за запитом</b></p>
+                <p style="color: #0565F3; margin-top: 15px;"><b style="font-size: 18px; font-weight: 700; margin-left: 45px;">від 12 до 16 днів</b></p>
+                <p style="color: #0565F3; margin-top: 15px;"><b style="font-size: 18px; font-weight: 700; margin-left: 45px;">до 40 кг</b></p>
+            </div>
+        </div>
+        <h2><i class="fa-solid fa-ship fa-sm"></i> Доставка морем</h2>
+        <div class="form_delivery_interface_column">
+            <p style="color: #0565F3; margin-top: 15px;">З Китаю в Україну</p>
+            <p style="color: #0565F3; margin-top: 15px;">Термін доставки:</p>
+            <p style="color: #0565F3; margin-top: 15px;">Вага:</p>
+            <div style="margin-top: 45px;">
+                <p style="color: #0565F3; margin-top: 15px;">З Китаю в Європу</p>
+                <p style="color: #0565F3; margin-top: 15px;">Термін доставки:</p>
+                <p style="color: #0565F3; margin-top: 15px;">Вага:</p>
+            </div>
+        </div>
+        <div class="form_delivery_interface_column">
+            <p style="color: #0565F3; margin-top: 15px;"><b style="font-size: 18px; font-weight: 700; margin-left: 45px;">за $4,4/кг</b></p>
+            <p style="color: #0565F3; margin-top: 15px;"><b style="font-size: 18px; font-weight: 700; margin-left: 45px;">від 50 днів</b></p>
+            <p style="color: #0565F3; margin-top: 15px;"><b style="font-size: 18px; font-weight: 700; margin-left: 45px;">до 40 кг</b></p>
+            <div style="margin-top: 45px;">
+                <p style="color: #0565F3; margin-top: 15px;"><b style="font-size: 18px; font-weight: 700; margin-left: 45px;">за запитом</b></p>
+                <p style="color: #0565F3; margin-top: 15px;"><b style="font-size: 18px; font-weight: 700; margin-left: 45px;">від 45 до 50 днів</b></p>
+                <p style="color: #0565F3; margin-top: 15px;"><b style="font-size: 18px; font-weight: 700; margin-left: 45px;">до 40 кг</b></p>
+            </div>
+        </div>
+        <h2><i class="fa-solid fa-truck-fast fa-sm"></i> Доставка транспортом</h2>
+        <div class="form_delivery_interface_column">
+            <p style="color: #0565F3; margin-top: 15px;">З Китаю в Україну</p>
+            <p style="color: #0565F3; margin-top: 15px;">Термін доставки:</p>
+            <p style="color: #0565F3; margin-top: 15px;">Вага:</p>
+        </div>
+        <div class="form_delivery_interface_column">
+            <p style="color: #0565F3; margin-top: 15px;"><b style="font-size: 18px; font-weight: 700; margin-left: 45px;">за запитом</b></p>
+            <p style="color: #0565F3; margin-top: 15px;"><b style="font-size: 18px; font-weight: 700; margin-left: 45px;">від 20 днів</b></p>
+            <p style="color: #0565F3; margin-top: 15px;"><b style="font-size: 18px; font-weight: 700; margin-left: 45px;">до 40 кг</b></p>
+        </div>
+    </div>
+    <div style="width: 100%; margin-bottom: 10px; color: #fff;">.</div>
+</div>
+<div id="instruction_show" style="margin-bottom: 150px;">
+    <div class="overflow-hidden">
+    <h2 style="font-size: 25px; color: #000001; padding: 6px 8px; display: inline-block; margin-top: 35px;" class="drop-in">Вхід в особистий кабінет</h2>
+    <p align='justify' data-aos-duration='1000' style="color: #000001; margin-left: 10px; margin-right: 20px; font-size: 16px; margin-top: 15px; display: block;" class="drop-in">У верхньому правому куті натиснути - Увійти.</p>
+    <p align='justify' data-aos-duration='1000' style="color: #000001; margin-left: 10px; margin-right: 20px; font-size: 16px; margin-top: 15px; display: block;" class="drop-in">Зареєструватися або увійти до свого облікового запису, вказавши необхідні дані.</p>
+    <h2 style="font-size: 25px; color: #000001; padding: 6px 8px; display: inline-block; margin-top: 35px;" class="drop-in-2">Створення одержувача</h2>
+	   <div style="color: #fff; margin-left: 10px; margin-right: 20px; font-size: 16px;"></div>
+          <p class="drop-in-2" align='justify' data-aos-duration='1000' style="color: #000001; margin-left: 10px; margin-right: 20px; font-size: 16px; display: inline-block;"><br>Ми доставляємо посилки:
+              <ul class="list_content">
+                  <li class="drop-in-2"><i class="fa-solid fa-circle" style="color: #000001; margin-top: 5px;"></i> у відділенні KDG ПОШТА</li>
+                  <li class="drop-in-2"><i class="fa-solid fa-circle" style="color: #000001; margin-top: 5px;"></i> у відділенні Нова Пошта</li>
+                  <li class="drop-in-2"><i class="fa-solid fa-circle" style="color: #000001; margin-top: 5px;"></i> у відділенні Укрпошта</li>
+                  <li class="drop-in-2"><i class="fa-solid fa-circle" style="color: #000001; margin-top: 5px;"></i> кур'єром</li>
+              </ul>
+           </p>
+    <p class="drop-in-2" align='justify' data-aos-duration='1000' style="color: #000001; margin-left: 10px; margin-right: 20px; font-size: 16px; margin-top: 15px; display: block;">Перед початком роботи в особистому кабінеті KDG China створіть одержувачів посилок.</p>
+    </div>
+</div>
+
+<div id="instruction_create_order" class="classic_ol" style="margin-left: auto; margin-right: auto; align-items: center; text-align: center; visibility: visible; margin-bottom: 100px;">
+    <p style='margin-left: 20px; font-family: Verdana; margin-right: 50px; font-size: 30px; font-weight:700; text-align: center;padding: 14px 16px; margin-top: 45px;'>Інструкція для оформлення замовлення:</p>
+    <ol>
+        <li><div style="display: grid;">
+            <h2 style="margin-right: 17px; text-align: justify; margin-top: 10px; margin-right: 50px; display: block;">Оформити замовлення за посиланням</h2>
+           </div>
+        </li>
+        <li><h2 style="margin-right: 17px; text-align: justify; margin-top: 10px; margin-right: 50px; display: block;">Оформити замовлення на сайті</h2></li>
+    </ol>
+</div>
+<div id="service_content" style="margin-bottom: 100px;">
+    <div style="background: url('images/imgonline-com-ua-Transparent-backgr-6zupW1VfVi9abC.png') no-repeat right center; height: 300px; width: 100%; margin-bottom: 25px;">
+        <div style="margin-left: auto; margin-right: auto; visibility: visible; margin-bottom: 15px;" class="services_content">
+           <h2 style="font-size: 25px; color: #000001; padding: 6px 8px; font-weight: 500;">Доставка з Китая в Україну</h2>
+            <div style="color: #fff; margin-left: 10px; margin-right: 20px; font-size: 16px;"></div>
+            <p align='justify' data-aos-duration='1000' style="color: #000001; margin-left: 10px; margin-right: 20px; font-size: 16px; font-weight: 500; line-height: 1.5em;"><br>Наша компанія KDG China здійснює доставку вантажів та товарів з Китая в Україну. Наші замовники можуть доручити Авіадоставку вантажів з Китаю будь-яких промислових товарів та комерційних вантажів, транспортну доставку великогабаратних вантажів, а також контейнерні перевезення морем. Окрім цього можлива експрес-доставка товарів до п'яти днів, яка вміщує вантаж з Китаю до 40 кг.</p>
+              <button class="button_1" style="margin-top:15px;" id="content_China_domestic">Читати більше</button>
+        </div>
+    </div>
+    <div style="background: url('images/imgonline-com-ua-Transparent-backgr-6zupW1VfVi9abC.png') no-repeat right center; background-color: #E6EFFD; height: 300px; width: 100%; margin-bottom: 25px;">
+        <div style="margin-left: auto; margin-right: auto; visibility: visible; margin-bottom: 15px;" class="services_content">
+           <h2 style="font-size: 25px; color: #000001; padding: 6px 8px; font-weight: 500;">Доставка по Україні</h2>
+            <div style="color: #fff; margin-left: 10px; margin-right: 20px; font-size: 16px;"></div>
+            <p align='justify' data-aos-duration='1000' style="color: #000001; margin-left: 10px; margin-right: 20px; font-size: 16px; font-weight: 500; line-height: 1.5em;"><br>Ми пропонуємо вам декілька варіантів доставки:<ul style="color: #000001; margin-left: 10px; margin-right: 20px;"><li>Кур'єром: додому, в офіс і за будь-якою зручною для вас адресою;</li><li>До відділення KDG Пошта, Нова пошта та Укрпошта.</li></ul></p>
+              <button class="button_1" style="margin-top:15px;" id="content_Ukraine_domestic">Читати більше</button>
+        </div>
+    </div>
+    <div style="background: url('images/pngimg.com - truck_PNG16223.png') no-repeat right center; height: 275px; width: 100%; margin-bottom: 25px;">
+        <div style="margin-left: auto; margin-right: auto; visibility: visible; margin-bottom: 15px;" class="services_content">
+           <h2 style="font-size: 25px; color: #000001; padding: 6px 8px; margin-top: 45px; font-weight: 500;">Експрес-міжнародна доставка</h2>
+           <div style="color: #fff; margin-left: 10px; margin-right: 20px; font-size: 16px;"></div>
+              <p align='justify' data-aos-duration='1000' style="color: #000001; margin-left: 10px; margin-right: 20px; font-size: 16px; font-weight: 500; line-height: 1.5em;" id="international_sentence"><br>Охоплення міжнародних експрес-послуг або послуг економ-класу, а також ефективна мультимодульна логістика великих і громіздких речей.</p>
+              <button class="button_1" style="margin-top:15px;" id="content_International">Читати більше</button>
+        </div>
+    </div>
+    <div style="background: url('images/1000_F_542095588_Kb9PQ50XucNkLFR4OKyWU2EW4I0WqSSA_small.png') no-repeat right center; background-color: #E6EFFD; height: 300px; width: 100%; margin-bottom: 25px;">
+        <div style="margin-left: auto; margin-right: auto; visibility: visible; margin-bottom: 15px;" class="services_content">
+           <h2 style="font-size: 25px; color: #000001; padding: 6px 8px; font-weight: 500;">Складські послуги </h2>
+           <div style="color: #fff; margin-left: 10px; margin-right: 20px; font-size: 16px;"></div>
+              <p align='justify' data-aos-duration='1000' style="color: #000001; margin-left: 10px; margin-right: 20px; font-size: 16px; font-weight: 500; line-height: 1.5em;"><br>Експертні поради та досвід рішень щодо складських послуг.<br>Послуги зберігання вантажів передбачають різні процеси, які дозволяють поліпшувати якість міжнародних транспортувань.<br>Перевірка товару, що надходить на складське приміщення.</p>
+              <button class="button_1" style="margin-top:15px;" id="content_Save">Читати більше</button>
+        </div>
+    </div>
+</div>
+<section class="store container" id="Shop-products" style="margin-top: 50px; margin-bottom: 100px;">
+    <h2 class="section-title">Магазин</h2>
+    <div class="store-content" id="Shop-List">
+        <div class="product-box">
+            <img src="images/shop_categories/white-t-shirt-mockup-png.webp" alt="" class="product-img"/>
+            <h2 class="product-title" id="Shop-text">Біла футболка</h2>
+            <span class="price" id="Shop-price">200 ₴</span>
+            <i class="fa-solid fa-heart favourite"></i>
+            <i class="bx bx-shopping-bag add-cart"></i>
+        </div>
+        <div class="product-box">
+            <img src="images/shop_categories/black-oversize-t-shirt-mockup-design-template-png.webp" alt="" class="product-img"/>
+            <h2 class="product-title">Чорна футболка</h2>
+            <span class="price">200 ₴</span>
+            <i class="fa-solid fa-heart favourite"></i>
+            <i class="bx bx-shopping-bag add-cart"></i>
+        </div>
+    </div>
+</section>
+<section id="currentShop" style="display: none; margin-bottom: 100px;">
+  <!-- У цьому розділі буде показано поточний магазин -->
+</section>
+<section id="cartShop" style="display: none; margin-bottom: 100px;" class="cart_interface">
+        <div class="cart">
+            <div class="cart-title"><h1 style="text-align: center;">Ваш кошик</h1></div>
+            <div class="cart-content" id="cartcontent">
+                <div class="cart-box" id="cartbox">
+                    <img src="images/shop_categories/white-t-shirt-mockup-png.webp" class="cart-img"/>
+                    <div class="detail-box">
+                        <div class="cart-product-title">Біла футболка</div>
+                        <div class="cart-price">200 ₴</div>
+                        <input type="number" value="1" class="cart-quantity" id="cartquantity">
+                    </div>
+                    <i class="bx bxs-trash-alt cart-remove" id="cartremove"></i>
+                </div>
+            </div>
+            <div class="total">
+                <div class="total-title">Загалом</div>
+                <div class="total-price" id="totalprice">0 ₴</div>
+            </div>
+            <button type="button" class="button_1" style="display: flex; margin-left: auto; margin-right: auto; margin-bottom: 25px;" id="btnbuy">Купити зараз</button>
+    </div>
+</section>
+<section id="favouriteShop" style="display: block; margin-bottom: 100px;" class="cart_interface">
+  <!-- У цьому розділі буде показано вибрані категорії -->
+    <div class="cart">
+        <div class="cart-title"><h1 style="text-align: center;">Ваше обране</h1></div>
+        <div class="cart-content" id="favourite_content">
+            <div class="cart-box" id="favourite_box">
+                <img src="images/shop_categories/white-t-shirt-mockup-png.webp" class="product-img" style="max-width: 23%;"/>
+                <div class="detail-box">
+                    <div class="product-title">Біла футболка</div>
+                    <div class="price">300 ₴</div>
+                </div>
+            </div>
+        </div>
+        <i class="fa-solid fa-heart favourite"></i>
+        <i class="bx bx-shopping-bag add-cart"></i>
+    </div>
+</section>
+<div style="margin-left: auto; margin-right: auto; margin-bottom: 100px; visibility: visible;" class="Ukraine_content_show" id="Ukraine_content_show">
+      <div class="column_services animated fadeInUp" style="display: flex; margin-bottom: 40px;">
+	   <h2 style="font-size: 25px; color: #000001; padding: 6px 8px; float: left;">Наступний день</h2>
+	   <div style="color: #fff; margin-left: 10px; margin-right: 20px; font-size: 16px;"></div>
+          <p align='justify' data-aos-duration='1000' style="color: #000001; margin-left: 10px; margin-right: 20px; font-size: 16px; float: left;"><br>Ця послуга ідеально підходить для завдань, які мають бути доставлені наступного дня, але ви гнучкі у своєму графіку.</p>
+
+	  </div>
+	  <div class="column_services animated fadeInUp" style="display: flex; margin-bottom: 40px;">
+       <h2 style="font-size: 25px; color: #000001; padding: 6px 8px; float: left;">Час наступного дня</h2>
+	   <div style="color: #fff; margin-left: 10px; margin-right: 20px; font-size: 16px; margin-left:10px;"></div>
+          <p align='justify' data-aos-duration='1000' style="color: #000001; margin-left: 10px; margin-right: 20px; font-size: 16px; float: left;"><br>Ця послуга ідеально підходить, коли ваша робота наступного дня має жорсткий термін доставки.</p>
+
+	  </div>
+      <div class="column_services animated fadeInUp" style="display: flex;">
+	   <h2 style="font-size: 25px; color: #000001; padding: 6px 8px; float: left;">Економіка</h2>
+	   <div style="color: #fff; margin-left: 10px; margin-right: 20px; font-size: 16px;"></div>
+          <p align='justify' data-aos-duration='1000' style="color: #000001; margin-left: 10px; margin-right: 20px; font-size: 16px; float: left;"><br>Ця послуга ідеально підходить, коли ви шукаєте економічно ефективний варіант доставки, а ваша робота має гнучкий термін доставки.</p>
+
+	  </div>
+	</div>
+<div style="margin-left: auto; margin-right: auto; margin-bottom: 100px; visibility: visible;" class="China_content_show" id="China_content_show">
+   <p style="padding: 14px 16px; line-height: 1.5em; text-align: justify; font-size: 16px;">Сучасний бізнес вимагає безліч можливостей.<br>Наша компанія KDG China пропонує вам, переміщення з перевезенням вантажів з Китаю. Замовник отримує тільки кінцевий результат. Доставка вантажу з Китаю виконується власним ресурсом компанії, що дозволяє надавати клієнтам вигідні умови і ціни на перевезення з Китаю.</p>
+    <h2 style=" margin-left: 15px;">Основні переваги послуг:</h2>
+    <div style="list-style-type: circle; margin-left: 15px; line-height: 1.5em; text-align: justify; font-size: 15px;">
+        <ul>
+            <li><i class="fa-solid fa-circle fa-2xs"></i> Повне оформлення вантажу на митниці;</li>
+            <li><i class="fa-solid fa-circle fa-2xs"></i> Страхування товарів;</li>
+            <li><i class="fa-solid fa-circle fa-2xs"></i> Допомога у пошуку та викупі товарів;</li>
+            <li><i class="fa-solid fa-circle fa-2xs"></i> Надаємо складські послуги;</li>
+            <li><i class="fa-solid fa-circle fa-2xs"></i> Вигідні тарифи;</li>
+            <li><i class="fa-solid fa-circle fa-2xs"></i> Можливість відстеження товарів та вантажу;</li>
+            <li><i class="fa-solid fa-circle fa-2xs"></i> Здійснення доставки у найкоротші терміни;</li>
+            <li><i class="fa-solid fa-circle fa-2xs"></i> Експрес-доставка вантажу з Китаю.</li>
+        </ul>
+    </div>
+</div>
+<div style="margin-left: auto; margin-right: auto; margin-bottom: 100px; visibility: visible;" class="International_content_show" id="International_content_show">
+     <p style="padding: 14px 16px; line-height: 1.5em; text-align: justify; font-size: 16px;">Щоб міжнародна доставка вантажів не стала для вас проблемою, а навпаки ефективним інструментом розвитку бізнесу, необхідно звернутися до професіоналів. Торговельне співробітництво між різними країнами - основа економічної діяльності багатьох компаній. Логістична компанія KDG China надає свої послуги. Доставка здійснюється у найкоротші терміни, гарантуючи її збереження.</p>
+      <div class="column_services animated fadeInUp" style="margin-bottom: 20px;">
+	   <h2 style="font-size: 25px; color: #000001; padding: 6px 8px; margin-left:10px;"><i class="fa-solid fa-truck-fast" style="color: #000001;"></i> Експрес</h2>
+	   <div style="color: #fff; margin-left: 10px; margin-right: 20px; font-size: 16px; margin-bottom: -20px;"></div>
+          <p align='justify' data-aos-duration='1000' style="color: #000001; margin-left: 10px; margin-right: 20px; padding: 14px 16px; line-height: 1.5em; text-align: justify; font-size: 16px;"><br>Ідеальний сервіс для ваших потреб у міжнародній доставці.
+            </p>
+	  </div>
+
+	  <div class="column_services animated fadeInUp">
+       <h2 style="font-size: 25px; color: #000001; padding: 6px 8px; margin-left:10px;"><i class="fa-solid fa-sack-dollar" style="color: #000001;"></i> Економіка</h2>
+	   <div style="color: #fff; margin-left: 10px; margin-right: 20px; font-size: 16px; margin-bottom: -20px;"></div>
+          <p align='justify' data-aos-duration='1000' style="color: #000001; margin-left: 10px; margin-right: 20px; padding: 14px 16px; line-height: 1.5em; text-align: justify; font-size: 16px;"><br>
+                Важкі, громіздкі предмети ідеально підходять для відправки економ-послугами.
+            </p>
+	  </div>
+	</div>
+<div style="margin-left: auto; margin-right: auto; margin-bottom: 100px; visibility: visible;" class="Save_content_show" id="Save_content_show">
+      <div class="column_services animated fadeInUp">
+	   <div>
+           <p style="padding: 14px 16px; line-height: 1.5em; text-align: justify; font-size: 16px;">Важливо, проміжну ланку процесу міжнародної доставки вантажу, є складування товару. Це надає можливість перевірити замовлення, консолідувати, доповнити або замінити упаковку тощо.<br>Складські послуги дозволяють знизити витрати на перевезення товару, оскільки так вигідніше перевезти одразу велику партію вантажу.<br>Самостійно шукати приміщення для тимчасового зберігання товару, оплата його оренди часто не є вихідним. В таких випадках наша порада, звернутися в компанію, яка має власні склади і надає повний комплекс складських послуг, гарантуючи збереження вашого замовлення.</p>
+       </div>
+	  </div>
+	</div>
+
+<div style="margin-left: auto; margin-right: auto; margin-bottom: 100px; visibility: visible;" id="tariffs">
+    <table width="100%" height="375" style="background-color: #0565F3; color: #fff; text-align: center;">
+        <tr>
+            <td></td>
+            <td style="width: 16%;"><h2 style="width: 100%;font-size: 20px;">Standard</h2></td>
+            <td style="width: 16%;"><h2 style="width: 100%;font-size: 20px;">Shopper</h2></td>
+            <td style="width: 16%;"><h2 style="width: 100%;font-size: 20px;">Gold</h2></td>
+            <td style="width: 16%;"><h2 style="width: 100%;font-size: 20px;">Platinum</h2></td>
+            <td style="width: 16%;"><h2 style="width: 100%;font-size: 20px;">Premium</h2></td>
+        </tr>
+        <tr>
+            <td style="width: 16%;"><h3>Діє за 1 місяць </h3></td>
+            <td style="width: 16%;"><i class="fa-solid fa-check fa-2xl"></i></td>
+            <td style="width: 16%;"><i class="fa-solid fa-check fa-2xl"></i></td>
+            <td style="width: 16%;"></td>
+            <td style="width: 16%;"></td>
+            <td style="width: 16%;"></td>
+        </tr>
+        <tr>
+            <td style="width: 16%;"><h3>Діє за 2 місяці </h3></td>
+            <td style="width: 16%;"></td>
+            <td style="width: 16%;"></td>
+            <td style="width: 16%;"><i class="fa-solid fa-check fa-2xl"></i></td>
+            <td style="width: 16%;"></td>
+            <td style="width: 16%;"></td>
+        </tr>
+        <tr>
+            <td style="width: 16%;"><h3>Діє за 3 місяці</h3></td>
+            <td style="width: 16%;"></td>
+            <td style="width: 16%;"></td>
+            <td style="width: 16%;"></td>
+            <td style="width: 16%;"><i class="fa-solid fa-check fa-2xl"></i></td>
+            <td style="width: 16%;"><i class="fa-solid fa-check fa-2xl"></i></td>
+        </tr>
+        <tr style="margin-top: 20px; margin-bottom: 20px;">
+            <td style="width: 16%;"><h3>Комісія за викуп</h3></td>
+            <td style="width: 16%;"><p style="font-size: 20px;">10%</p></td>
+            <td style="width: 16%;"><p style="font-size: 20px;">8%</p></td>
+            <td style="width: 16%;"><p style="font-size: 20px;">6%</p></td>
+            <td style="width: 16%;"><p style="font-size: 20px;">5%</p></td>
+            <td style="width: 16%;"><p style="font-size: 20px;">5%</p></td>
+        </tr>
+        <tr>
+            <td style="width: 16%;"><h3>Комісія за оплату</h3></td>
+            <td style="width: 16%;"><p style="font-size: 20px;">5%</p></td>
+            <td style="width: 16%;"><p style="font-size: 20px;">4%</p></td>
+            <td style="width: 16%;"><p style="font-size: 20px;">4%</p></td>
+            <td style="width: 16%;"><p style="font-size: 20px;">4%</p></td>
+            <td style="width: 16%;"><p style="font-size: 20px;">4%</p></td>
+        </tr>
+    </table>
+</div>
+
+<div class="footer">
+      <div class="heading">
+      </div>
+      <div class="content">
+        <div class="services">
+          <h4>Доставка</h4>
+          <p><a id="content_Tmail_footer_first">Самостійна покупка на Tmail</a></p>
+          <p><a id="question_delivery_menu">Як оформити доставку</a></p>
+          <p><a id="tips_menu">FAQ та поради</a></p>
+        </div>
+        <div>
+          <h4>Магазин</h4>
+            <p>
+             <a id="instruction_create_order_footer">Як створити замовлення</a>
+          </p>
+          <p>
+            <a id="content_Tmail_footer_second"> Інструкція Tmail</a>
+          </p>
+          <p>
+            <a id="content_WeChat_footer"> Інструкція WeChat</a>
+          </p>
+          <p>
+            <a id="content_Alibaba_footer"> Інструкція Alibaba</a>
+          </p>
+          <p>
+            <a id="content_Aliexpress_footer"> Інструкція Aliexpress</a>
+          </p>
+        </div>
+        <div class="links">
+          <h4>Послуги</h4>
+          <p><a id="China_click_footer">Доставка по Україні</a></p>
+          <p><a id="international_click_footer">Експрес-міжнародна доставка</a></p>
+        </div>
+        <div class="details">
+          <h4 class="address">Мобільний додаток</h4>
+          <p><img src="images/icons/800px-Telegram_Messenger.png" style="width:40px;"><img src="images/icons/Facebook_Logo_(2019).png" style="width:40px;"><img src="images/icons/Instagram_icon.png" style="width:40px;"></p>
+        </div>
+      </div>
+      <footer>
+        © 2023 All rights reserved.
+      </footer>
+    </div>
+</body>
+<script src="js/myScript.js"></script>
+</html>
